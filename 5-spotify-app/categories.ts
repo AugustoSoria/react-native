@@ -8,7 +8,7 @@ export interface ICategory {
   }[];
   name: string;
 }
-// ver si la api da el color
+
 export const categories: ICategory[] = [
   {
     href: "https://api.spotify.com/v1/browse/categories/0JQ5DAt0tbjZptfcdMSKl3",

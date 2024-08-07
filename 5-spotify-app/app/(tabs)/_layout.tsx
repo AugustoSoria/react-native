@@ -10,8 +10,7 @@ function TabsLayout() {
     <Tabs
       screenOptions={{
         tabBarStyle: { backgroundColor: "#000000d9" },
-        headerStyle: { backgroundColor: "black" },
-        headerTintColor: "white"
+        headerShown: false,
       }}
     >
       {/* <Tabs.Screen

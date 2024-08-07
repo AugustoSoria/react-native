@@ -1,3 +1,4 @@
+import GradientHeader from "@/components/GradientHeader";
 import { Stack } from "expo-router";
 import { StatusBar } from "expo-status-bar";
 
@@ -7,11 +8,25 @@ function Layout() {
       <StatusBar style={"light"} />
       <Stack
         screenOptions={{
-          headerStyle: { backgroundColor: "#0c1854" },
+          headerBackground: () => (
+            <GradientHeader color={"black"} />
+          ),
           headerTintColor: "white",
-          headerShown: false,
-        }}
-      />
+        }}>
+        <Stack.Screen 
+          name="(tabs)" 
+          options={{
+            headerTitle: "Buscar",
+          }}
+        />
+        <Stack.Screen 
+          name="[categoryName]" 
+          options={{
+            headerTitle: "",
+          }}
+        />
+
+      </Stack>
     </>
   );
 }
