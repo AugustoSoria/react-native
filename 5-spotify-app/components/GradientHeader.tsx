@@ -1,11 +1,11 @@
 import { LinearGradient } from 'expo-linear-gradient';
 
 interface props {
-  color: string
+  color?: string
 }
 
-function GradientHeader({ color }: props) {
-  console.log("color: " + color)
+function GradientHeader({ color = "red" }: props) {
+
   return (
     <LinearGradient
       colors={[color, '#000000' ]}

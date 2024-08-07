@@ -6,7 +6,7 @@ import { useEffect } from "react";
 import { FlatList, Text, View } from "react-native";
 
 function CategoryPage() {
-  const { categoryName, data } = useLocalSearchParams();
+  const { data } = useLocalSearchParams();
   const pData = data ? JSON.parse(data as string) : null;
   const navigation = useNavigation();
 
@@ -20,7 +20,7 @@ function CategoryPage() {
 
   return (
     <View style={{flex: 1, padding: 15, backgroundColor: "black"}}>
-      <Text style={{color: "white", fontSize: 25, marginBottom: 30}}>{categoryName}</Text>
+      <Text style={{color: "white", fontSize: 25, marginBottom: 30}}>{pData.categoryName}</Text>
       <FlatList
         numColumns={3}
         columnWrapperStyle={{ justifyContent: 'space-between' }}

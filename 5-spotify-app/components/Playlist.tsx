@@ -15,7 +15,7 @@ function Playlist({playlist}: Props) {
         }}
       />
       <Text style={{color: "white", textAlign: "center", fontSize: 15}}>{playlist.name}</Text>
-      <Text style={{color: "grey", textAlign: "center", textTransform: "uppercase", fontSize: 7}}>{playlist.type} • de {playlist.owner.display_name}</Text>
+      <Text style={{color: "grey", textAlign: "center", textTransform: "uppercase", fontSize: 7}}>{playlist.type} • from {playlist.owner.display_name}</Text>
     </View>
   );
 }

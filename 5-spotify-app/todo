@@ -1,1 +1,3 @@
-tab layout doesnt appear when navigate
+[x] tab layout doesnt appear when navigate
+[] the icons in the tabs bar should change when are focused
+[] the GradientHeader color should change

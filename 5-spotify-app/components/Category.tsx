@@ -13,10 +13,10 @@ function Category({category}: Props) {
 
   return (
     <Link href={{
-      pathname: '/[categoryName]',
+      pathname: '/(tabs)(category)[categoryName]',
       params: {
         categoryName: category.name,
-        data: JSON.stringify({color: rdmColor})
+        data: JSON.stringify({color: rdmColor, categoryName: category.name})
       }
     }} asChild>
       <Pressable>

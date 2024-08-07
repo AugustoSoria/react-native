@@ -7,7 +7,7 @@ function Main() {
   return (
     <View style={{ flex: 1, backgroundColor: "black", padding: 15 }}>
       <SearchBar />
-      <Text style={{ color: "white", fontSize: 17, marginVertical: 10 }}>Explorar todo</Text>
+      <Text style={{ color: "white", fontSize: 17, marginVertical: 10 }}>Browse all</Text>
       <CategoryList />
     </View>
   );

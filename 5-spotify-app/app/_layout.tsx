@@ -1,31 +1,29 @@
+import CustomHeaderBackBtn from "@/components/CustomHeaderBackBtn";
 import GradientHeader from "@/components/GradientHeader";
-import { Stack } from "expo-router";
+import { Stack, usePathname } from "expo-router";
 import { StatusBar } from "expo-status-bar";
 
 function Layout() {
+  const pathname = usePathname();
+  const headerTitle = pathname === "/"? "Search" : ""
+
   return (
     <>
       <StatusBar style={"light"} />
       <Stack
         screenOptions={{
           headerBackground: () => (
-            <GradientHeader color={"black"} />
+            <GradientHeader />
           ),
           headerTintColor: "white",
         }}>
         <Stack.Screen 
           name="(tabs)" 
           options={{
-            headerTitle: "Buscar",
+            headerTitle,
+            headerLeft: () => <CustomHeaderBackBtn show={headerTitle === ""} />
           }}
         />
-        <Stack.Screen 
-          name="[categoryName]" 
-          options={{
-            headerTitle: "",
-          }}
-        />
-
       </Stack>
     </>
   );

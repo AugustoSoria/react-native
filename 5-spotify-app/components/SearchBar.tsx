@@ -11,7 +11,7 @@ function SearchBar() {
       <FontAwesome name="search" size={24} color="black" />
       <TextInput
         style={{ width: "90%", height: 35, fontSize: 20, fontWeight: "900" }}
-        placeholder="¿Qué queres escuchar?"
+        placeholder="Artists, songs or prodcasts"
         onChangeText={setSearch}
         value={search}
       />
